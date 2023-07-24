@@ -2,3 +2,6 @@ Temel HTML CSS JS
 https://www.w3schools.com/
 https://developer.mozilla.org/en-US/
 
+
+CSS Selectors
+https://webdesign.tutsplus.com/the-30-css-selectors-you-must-memorize--net-16048t
