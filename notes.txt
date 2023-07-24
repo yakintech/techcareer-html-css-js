@@ -1,0 +1,3 @@
+Live server ext
+vs code ext üzerinden live server yazarak indirebilirsin
+ritwickdey.LiveServer

@@ -1,0 +1,4 @@
+Temel HTML CSS JS
+https://www.w3schools.com/
+https://developer.mozilla.org/en-US/
+
