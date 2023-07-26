@@ -1,0 +1,15 @@
+
+
+Flex Okuma ve İzleme
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+https://www.youtube.com/watch?v=_s15i3MoAyE
+
+Flex Game
+https://flexboxfroggy.com/
+
+
+Template ( Hafta sonu ödevi )
+Page-1
+https://startbootstrap.com/previews/clean-blog
+Yukarıdaki 4 menüde olan tüm pageler yapılacak!
+
