@@ -1,0 +1,16 @@
+{
+  "name": "html-css-js-tutorial-techcareer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass html-css/sassSample/techcareerTemplate/assets/scss/main.scss html-css/sassSample/techcareerTemplate/assets/scss/main.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.64.1"
+  }
+}

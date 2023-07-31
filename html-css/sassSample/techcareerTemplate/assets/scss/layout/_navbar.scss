@@ -1,0 +1,21 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    height: 68px;
+    padding-left:10%;
+    padding-right: 10%;
+
+    ul{
+        display: flex;
+    }
+    a{
+        text-decoration: none;
+        color: #000;
+        font-size: 1.2rem;
+        font-weight: 600;
+        padding: 0 1rem;
+        &:hover{
+            color: #f00;
+        }
+    }
+}
