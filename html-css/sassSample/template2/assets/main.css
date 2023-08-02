@@ -1,0 +1,117 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v5.0.2 | 20191019
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block;
+}
+
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+  display: none;
+}
+
+body {
+  line-height: 1;
+}
+
+menu, ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+nav {
+  background-color: #F8F9FA;
+  height: 66px;
+  padding-left: 10%;
+  padding-right: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #000;
+}
+nav button {
+  width: 87px;
+  height: 50px;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+}
+
+button {
+  background-color: #085ED6;
+}
+
+header {
+  background: url("https://startbootstrap.github.io/startbootstrap-landing-page/assets/img/bg-masthead.jpg") no-repeat center center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 661px;
+}
+header p {
+  font-size: 3rem;
+  color: #fff;
+  width: 50%;
+  text-align: center;
+}
+header div {
+  margin-top: 20px;
+}
+header input {
+  padding: 1rem 1.25rem;
+  font-size: 1.25rem;
+  border-radius: 0.5rem;
+  width: 500px;
+  height: 64px;
+  box-sizing: border-box;
+}
+header button {
+  width: 103px;
+  height: 64px;
+  border: none;
+}
+
+/*# sourceMappingURL=main.css.map */

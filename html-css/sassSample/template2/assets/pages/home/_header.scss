@@ -1,0 +1,35 @@
+header {
+    background: url('https://startbootstrap.github.io/startbootstrap-landing-page/assets/img/bg-masthead.jpg')no-repeat center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 661px;
+
+    p {
+        font-size: 3rem;
+        color: $white;
+        width: 50%;
+        text-align: center;
+    }
+
+    div {
+        margin-top: 20px;
+    }
+
+    input {
+        padding: 1rem 1.25rem;
+        font-size: 1.25rem;
+        border-radius: 0.5rem;
+        width: 500px;
+        height: 64px;
+        box-sizing: border-box;
+
+    }
+
+    button{
+        width: 103px;
+        height: 64px;
+        border:none
+    }
+}

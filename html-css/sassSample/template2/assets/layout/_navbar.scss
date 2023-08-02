@@ -1,0 +1,23 @@
+nav{
+    background-color: $backColor;
+    height: 66px;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    a{
+        text-decoration: none;
+        font-size: 16px;
+        color: $black
+    }
+
+    button{
+        width: 87px;
+        height: 50px;
+        color: $white;
+        border: none;
+        border-radius: 10px;
+    }
+}

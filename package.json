@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass html-css/sassSample/techcareerTemplate/assets/scss/main.scss html-css/sassSample/techcareerTemplate/assets/scss/main.css"
+    "sass": "sass html-css/sassSample/template2/assets/main.scss html-css/sassSample/template2/assets/main.css"
   },
   "keywords": [],
   "author": "",
