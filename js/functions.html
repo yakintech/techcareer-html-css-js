@@ -1,12 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+
 </body>
+<script>
+
+    function hello() {
+        console.log('Hello JS function!!');
+    }
+
+    var merhaba = function () {
+        console.log("Merhaba JS fonksiyonu! ");
+    }
+
+    // hello();
+    // merhaba();
+
+
+    function calc(x, y) {
+        var z = x + y;
+        console.log('Result: ', z);
+    }
+
+    // calc(10, 11)
+
+
+    //bu fonksiyon dışarıdan bir adet parametre alır ve dışarıda total isimli değeri RETURN eder
+    var total = 0;
+    function taxPrice(price) {
+        total = price * 1.2;
+        return total;
+    }
+
+    var q = taxPrice(1000);
+    //console.log('Result ', q);
+
+
+    var person = {
+        name: "Çağatay",
+        surname: "Yıldız",
+        pointCalc: function(point){
+            let data = point * point;
+            
+            return this.name + " " + this.name  + " " + data;
+        }
+    }
+
+
+
+
+</script>
+
 </html>
