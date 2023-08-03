@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+            /* padding-left: 3%; */
+        }
+        .horses {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        img {
+            width: 300px;
+            height: 150px;
+        }
+        hr{
+            margin: 0px;
+            position: fixed;
+            width: 5px;
+            height: 100vh;
+            background-color: red;
+            border: 0;
+            top: 0px;
+            left: 1000px;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="start()">Start</button>
+    <div class="horses">
+        <img id="horse1" src="https://ares.shiftdelete.net/2018/05/aYBjv5.jpg" alt="">
+
+        <img id="horse2" src="https://www.eregligunes.com/urun/shop/12467-732023412.jpg" alt="">
+
+        <img id="horse3" src="https://www.atyemi.com/uploads/blogs/1605084658-spirit_kasym_aylyk_icyerikler-05.jpg"
+            alt="">
+
+    </div>
+
+    <hr>
+</body>
+<script>
+
+    var horse1Left = 0;
+    var horse2Left = 0;
+    var horse3Left = 0;
+    function start() {
+
+
+      var interval = setInterval(() => {
+            //Start butonuna bastığımda atlara belirli bir aralıka random değer assign edilecek
+            var random1 = Math.floor(Math.random() * 200);
+            var random2 = Math.floor(Math.random() * 200);
+            var random3 = Math.floor(Math.random() * 200);
+
+            horse1Left = horse1Left + random1;
+            horse2Left = horse2Left + random2;
+            horse3Left = horse3Left + random3;
+
+            document.getElementById("horse1").style.marginLeft = horse1Left + "px";
+            document.getElementById("horse2").style.marginLeft = horse2Left + "px";
+            document.getElementById("horse3").style.marginLeft = horse3Left + "px";
+
+            if(horse1Left > 700){
+                clearInterval(interval);
+                setTimeout(() => {
+                    alert("Horse 1 win!")
+                }, 1000);
+              
+            }
+            else if(horse2Left > 700){
+                clearInterval(interval)
+                setTimeout(() => {
+                    alert("Horse 2 win!")
+                }, 1000);
+            }
+            else if(horse3Left > 700){
+                clearInterval(interval)
+                setTimeout(() => {
+                    alert("Horse 3 win!")
+                }, 1000);
+            }
+
+
+        }, 500);
+
+
+    }
+
+</script>
+
+</html>
