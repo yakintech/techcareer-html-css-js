@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="go()" style="width: 70px; height: 70px;">GO!</button>
+</body>
+<script>
+    //Butona her tıkladığında buton x ve y ekseninde 0-500 px arası rastgele kaysın!
+
+    function go(){
+        var randomX = Math.floor(Math.random() * 900);
+        var randomy = Math.floor(Math.random() * 900);
+
+        document.querySelector('button').style.marginLeft = randomX + "px";
+        document.querySelector('button').style.marginTop = randomy + "px";
+
+
+    }
+</script>
+</html>

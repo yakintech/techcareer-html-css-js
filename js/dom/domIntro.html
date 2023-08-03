@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">İstanbul</h1>
+    <h1>İstanbul</h1>
+    <h1>İstanbul</h1>
+
+    <button onclick="change()">Change</button>
+    <button onclick="changeColor()">Change Color</button>
+
+</body>
+<script>
+
+    function change(){
+        // document.getElementById('title').innerText = "İzmir";
+        document.querySelector("h1").innerText = "Ankara";
+    }
+
+    function changeColor(){
+        document.getElementById('title').style.color = 'red'
+    }
+
+</script>
+</html>

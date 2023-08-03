@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <button onclick="addRandom()">Add Random Number</button>
+     <div>
+
+     </div>
+</body>
+<script>
+    function addRandom(){
+        var randomNumber = Math.random();
+        //Math.Random ile 0 ile 1 arasında bir sayı üretili. ondalıklı
+
+        //öncelikle bir h1 elementi create ediyorum.
+        var h1Element = document.createElement('h1');
+        h1Element.innerText = randomNumber;
+
+        document.querySelector('div').appendChild(h1Element);
+    }
+</script>
+</html>

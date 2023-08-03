@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="changeBodyColor()">Change Body Color</button>
+</body>
+<script>
+
+    var colors = ["red", "yellow"];
+
+    var randomIndex = -1;
+    function changeBodyColor() {
+        var randomColor = Math.floor(Math.random() * colors.length);
+
+        if(randomColor != randomIndex){
+            document.querySelector("body").style.backgroundColor = colors[randomColor];
+            randomIndex = randomColor;
+        }
+        else{
+            changeBodyColor()
+        }
+
+    }
+</script>
+
+</html>
