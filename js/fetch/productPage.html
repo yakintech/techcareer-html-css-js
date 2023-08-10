@@ -70,10 +70,33 @@
             let tdStock = document.createElement('td');
             tdStock.innerHTML = item.unitsInStock;
 
+            let buttonElement = document.createElement('button')
+            buttonElement.innerHTML = "Delete"
+            buttonElement.addEventListener('click', function () {
+
+                //Öncelikle web service bu datayı silmek istediğimi belirtiyorum. eğer web servisten OK dönerse datayı tasarımdan da uçuracağım
+
+                fetch("https://northwind.vercel.app/api/products/" + item.id, {
+                    method: 'DELETE'
+                })
+                    .then(res => {
+                        this.parentElement.remove()
+                    })
+
+                //axios.delete("https://northwind.vercel.app/api/products/" + item.id)
+                //     .then(res => {
+                //         this.parentElement.remove()
+                //     })
+
+
+            })
+
             trElement.appendChild(tdId);
             trElement.appendChild(tdName);
             trElement.appendChild(tdPrice);
             trElement.appendChild(tdStock);
+            trElement.appendChild(buttonElement);
+
 
             document.querySelector('tbody').appendChild(trElement);
         })
