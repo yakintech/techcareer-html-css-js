@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <ul>
+
+    </ul>
+    <button onclick="getData()">GET DATA FROM WEB API</button>
+</body>
+<script>
+
+    function getData(){
+
+        document.querySelector('ul').innerHTML = "";
+        
+        axios.get("https://northwind.vercel.app/api/categories")
+        .then(response => {
+            let categories = response.data;
+
+            categories.forEach(element => {
+                
+                var liElement = document.createElement('li');
+                liElement.innerHTML = element.name;
+
+                document.querySelector('ul').appendChild(liElement);
+                
+            });
+
+        })
+        .catch(err => console.log("ERROR ",err))
+    }
+
+
+</script>
+
+</html>

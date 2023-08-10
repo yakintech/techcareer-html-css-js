@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="padding: 2%">
+    <div>
+        <label for="">Search: </label>
+        <input type="text" id="search" onkeyup="change()" />
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+
+</body>
+<script>
+
+    function change() {
+        var search = document.getElementById('search').value.toLowerCase();
+
+
+        var filteredData = originalData.filter(q => q.name.toLowerCase().includes(search))
+
+        fillData(filteredData)
+    }
+
+    let originalData = []
+    fetch('https://northwind.vercel.app/api/products')
+        .then(res => res.json())
+        .then(data => {
+            originalData = data;
+            fillData(data)
+        })
+
+
+    function fillData(data) {
+        document.querySelector("tbody").innerHTML = "";
+
+
+        data.map(item => {
+
+            let trElement = document.createElement('tr');
+
+            let tdId = document.createElement('td');
+            tdId.innerHTML = item.id;
+
+            let tdName = document.createElement('td');
+            tdName.innerHTML = item.name;
+
+            let tdPrice = document.createElement('td');
+            tdPrice.innerHTML = item.unitPrice.toFixed(2);
+
+            let tdStock = document.createElement('td');
+            tdStock.innerHTML = item.unitsInStock;
+
+            trElement.appendChild(tdId);
+            trElement.appendChild(tdName);
+            trElement.appendChild(tdPrice);
+            trElement.appendChild(tdStock);
+
+            document.querySelector('tbody').appendChild(trElement);
+        })
+
+    }
+</script>
+
+</html>

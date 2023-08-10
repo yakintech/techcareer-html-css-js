@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+<body>
+    <div>
+        <div>
+            <label for="">Lat: </label>
+            <input type="text" id="lat" value="38.423733" />
+        </div>
+        <div>
+            <label for="">Lat: </label>
+            <input type="text" id="lon" value="27.142826" />
+        </div>
+        <div>
+            <button onclick="getWeather()">Get</button>
+        </div>
+        <h1 id="celsius"></h1>
+    </div>
+</body>
+<script>
+    //38.423733
+    //27.142826
+    function getWeather(){
+        var lat = document.getElementById('lat').value;
+        var lot = document.getElementById('lon').value;
+
+        axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lot}&exclude=minutely,hourly,alerts&units=metric&appid=eeaf063d086b4c9222dcaa0155c5fd8b`)
+        .then(res => {
+           
+            document.querySelector('#celsius').innerHTML = res.data.current.temp + " Celsius"
+          
+        })
+
+    }
+    //
+</script>
+</html>
